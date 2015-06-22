@@ -31,3 +31,13 @@ DerivedData
 # Carthage/Checkouts
 
 Carthage/Build
+
+DerivedData/**
+.DS_Store
+UserInterfaceState.xcuserstate
+xcuserdata/
+
+.idea/encodings.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/misc.xml
