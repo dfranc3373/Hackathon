@@ -15,3 +15,6 @@ Template starter project for getting up and running with Sense360's IOS SDK in S
 1. Compile and run on phone or simulator.
 1. Check the logs (phone) or console (simulator) to see the magic!
 
+## Documentation
+
+http://www.sense360.com/docs.html
