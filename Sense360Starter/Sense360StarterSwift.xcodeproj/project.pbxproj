@@ -19,9 +19,9 @@
 		33C0EF0B1B3896B300AB5985 /* EnteredRestaurantDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0EF0A1B3896B300AB5985 /* EnteredRestaurantDetector.swift */; };
 		33C0EF0F1B389F6C00AB5985 /* EnteredHomeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0EF0E1B389F6C00AB5985 /* EnteredHomeDetector.swift */; };
 		33C0EF111B38A47800AB5985 /* EnteredGeofenceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0EF101B38A47800AB5985 /* EnteredGeofenceDetector.swift */; };
-		96E6B8511B3BA2140042C2BF /* SenseSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E6B8501B3BA2140042C2BF /* SenseSdk.framework */; };
-		96E6B8521B3BA21C0042C2BF /* SenseSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E6B8501B3BA2140042C2BF /* SenseSdk.framework */; };
-		96E6B8531B3BA21C0042C2BF /* SenseSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96E6B8501B3BA2140042C2BF /* SenseSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		96BF38D81B3CB2DA00277004 /* SenseSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BF38D71B3CB2DA00277004 /* SenseSdk.framework */; };
+		96BF38D91B3CB2E300277004 /* SenseSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BF38D71B3CB2DA00277004 /* SenseSdk.framework */; };
+		96BF38DA1B3CB2E300277004 /* SenseSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96BF38D71B3CB2DA00277004 /* SenseSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,7 +31,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				96E6B8531B3BA21C0042C2BF /* SenseSdk.framework in Embed Frameworks */,
+				96BF38DA1B3CB2E300277004 /* SenseSdk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,7 +53,7 @@
 		33C0EF0A1B3896B300AB5985 /* EnteredRestaurantDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnteredRestaurantDetector.swift; sourceTree = "<group>"; };
 		33C0EF0E1B389F6C00AB5985 /* EnteredHomeDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnteredHomeDetector.swift; sourceTree = "<group>"; };
 		33C0EF101B38A47800AB5985 /* EnteredGeofenceDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnteredGeofenceDetector.swift; sourceTree = "<group>"; };
-		96E6B8501B3BA2140042C2BF /* SenseSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SenseSdk.framework; sourceTree = "<group>"; };
+		96BF38D71B3CB2DA00277004 /* SenseSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SenseSdk.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +63,8 @@
 			files = (
 				33C0EF021B3892FA00AB5985 /* libz.dylib in Frameworks */,
 				33C0EF001B3892F100AB5985 /* SystemConfiguration.framework in Frameworks */,
-				96E6B8521B3BA21C0042C2BF /* SenseSdk.framework in Frameworks */,
-				96E6B8511B3BA2140042C2BF /* SenseSdk.framework in Frameworks */,
+				96BF38D91B3CB2E300277004 /* SenseSdk.framework in Frameworks */,
+				96BF38D81B3CB2DA00277004 /* SenseSdk.framework in Frameworks */,
 				33C0EEFE1B3892EB00AB5985 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,7 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				33C0EF011B3892FA00AB5985 /* libz.dylib */,
-				96E6B8501B3BA2140042C2BF /* SenseSdk.framework */,
+				96BF38D71B3CB2DA00277004 /* SenseSdk.framework */,
 				33C0EEFF1B3892F100AB5985 /* SystemConfiguration.framework */,
 				33C0EEFD1B3892EB00AB5985 /* CoreLocation.framework */,
 				33C0EED81B3892B400AB5985 /* Sense360Starter */,
