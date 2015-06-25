@@ -44,6 +44,8 @@ class EnteredGeofenceDetector: RecipeFiredDelegate {
         for trigger in args.triggersFired {
             for place in trigger.places {
                 NSLog(place.description)
+                let transitionDesc = args.recipe.trigger.transitionType.description
+                NotificationSender.send("\(transitionDesc) \(place.description)")
             }
         }
     }

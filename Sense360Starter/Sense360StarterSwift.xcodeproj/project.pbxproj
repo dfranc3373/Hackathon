@@ -15,10 +15,10 @@
 		33C0EEFE1B3892EB00AB5985 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C0EEFD1B3892EB00AB5985 /* CoreLocation.framework */; };
 		33C0EF001B3892F100AB5985 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C0EEFF1B3892F100AB5985 /* SystemConfiguration.framework */; };
 		33C0EF021B3892FA00AB5985 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C0EF011B3892FA00AB5985 /* libz.dylib */; };
-		33C0EF071B38943D00AB5985 /* NotificationSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0EF061B38943D00AB5985 /* NotificationSender.swift */; };
 		33C0EF0B1B3896B300AB5985 /* EnteredRestaurantDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0EF0A1B3896B300AB5985 /* EnteredRestaurantDetector.swift */; };
 		33C0EF0F1B389F6C00AB5985 /* EnteredHomeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0EF0E1B389F6C00AB5985 /* EnteredHomeDetector.swift */; };
 		33C0EF111B38A47800AB5985 /* EnteredGeofenceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0EF101B38A47800AB5985 /* EnteredGeofenceDetector.swift */; };
+		33CFEE6F1B3CB9F40079E832 /* NotificationSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CFEE6E1B3CB9F40079E832 /* NotificationSender.swift */; };
 		96BF38D81B3CB2DA00277004 /* SenseSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BF38D71B3CB2DA00277004 /* SenseSdk.framework */; };
 		96BF38D91B3CB2E300277004 /* SenseSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BF38D71B3CB2DA00277004 /* SenseSdk.framework */; };
 		96BF38DA1B3CB2E300277004 /* SenseSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96BF38D71B3CB2DA00277004 /* SenseSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -50,10 +50,10 @@
 		33C0EEFD1B3892EB00AB5985 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		33C0EEFF1B3892F100AB5985 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		33C0EF011B3892FA00AB5985 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		33C0EF061B38943D00AB5985 /* NotificationSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSender.swift; sourceTree = "<group>"; };
 		33C0EF0A1B3896B300AB5985 /* EnteredRestaurantDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnteredRestaurantDetector.swift; sourceTree = "<group>"; };
 		33C0EF0E1B389F6C00AB5985 /* EnteredHomeDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnteredHomeDetector.swift; sourceTree = "<group>"; };
 		33C0EF101B38A47800AB5985 /* EnteredGeofenceDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnteredGeofenceDetector.swift; sourceTree = "<group>"; };
+		33CFEE6E1B3CB9F40079E832 /* NotificationSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSender.swift; sourceTree = "<group>"; };
 		96BF38D71B3CB2DA00277004 /* SenseSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SenseSdk.framework; sourceTree = "<group>"; };
 		96BF38DD1B3CB66200277004 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -105,10 +105,10 @@
 				33C0EEE21B3892B400AB5985 /* Images.xcassets */,
 				33C0EEE41B3892B400AB5985 /* LaunchScreen.xib */,
 				33C0EED91B3892B400AB5985 /* Supporting Files */,
-				33C0EF061B38943D00AB5985 /* NotificationSender.swift */,
 				33C0EF0A1B3896B300AB5985 /* EnteredRestaurantDetector.swift */,
 				33C0EF0E1B389F6C00AB5985 /* EnteredHomeDetector.swift */,
 				33C0EF101B38A47800AB5985 /* EnteredGeofenceDetector.swift */,
+				33CFEE6E1B3CB9F40079E832 /* NotificationSender.swift */,
 			);
 			path = Sense360Starter;
 			sourceTree = "<group>";
@@ -200,7 +200,7 @@
 				33C0EF0B1B3896B300AB5985 /* EnteredRestaurantDetector.swift in Sources */,
 				33C0EF111B38A47800AB5985 /* EnteredGeofenceDetector.swift in Sources */,
 				33C0EF0F1B389F6C00AB5985 /* EnteredHomeDetector.swift in Sources */,
-				33C0EF071B38943D00AB5985 /* NotificationSender.swift in Sources */,
+				33CFEE6F1B3CB9F40079E832 /* NotificationSender.swift in Sources */,
 				33C0EEDE1B3892B400AB5985 /* ViewController.swift in Sources */,
 				33C0EEDC1B3892B400AB5985 /* AppDelegate.swift in Sources */,
 			);
