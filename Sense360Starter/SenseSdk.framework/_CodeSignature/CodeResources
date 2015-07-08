@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SenseSdk-Swift.h</key>
 		<data>
-		P90SqZfFv/443whqU+3O3ZAaV+o=
+		+Q803Hbo+dEkOAQpPXcsw2bsYQY=
 		</data>
 		<key>Headers/SenseSdk.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		bo0pCzxSm5i9ICdYspvlPDSUIAs=
+		OikDJ6HcB0Ufd4RkJGwSfv68q3A=
 		</data>
 		<key>Modules/SenseSdk.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/SenseSdk.swiftmodule/arm.swiftmodule</key>
 		<data>
-		Cl/AmnwoDdKxED7fPXtwroW7Tt0=
+		XYVFgBxyx8DqID0c0N9nstwLbS4=
 		</data>
 		<key>Modules/SenseSdk.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/SenseSdk.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		nt8mIZlRWoxmx0qqe1qHSK/zr6o=
+		5Uh3AG9YpBT3xPRt5JV3hlqpUwI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -41,7 +41,7 @@
 	<dict>
 		<key>Headers/SenseSdk-Swift.h</key>
 		<data>
-		P90SqZfFv/443whqU+3O3ZAaV+o=
+		+Q803Hbo+dEkOAQpPXcsw2bsYQY=
 		</data>
 		<key>Headers/SenseSdk.h</key>
 		<data>
@@ -53,7 +53,7 @@
 		</data>
 		<key>Modules/SenseSdk.swiftmodule/arm.swiftmodule</key>
 		<data>
-		Cl/AmnwoDdKxED7fPXtwroW7Tt0=
+		XYVFgBxyx8DqID0c0N9nstwLbS4=
 		</data>
 		<key>Modules/SenseSdk.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -61,7 +61,7 @@
 		</data>
 		<key>Modules/SenseSdk.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		nt8mIZlRWoxmx0qqe1qHSK/zr6o=
+		5Uh3AG9YpBT3xPRt5JV3hlqpUwI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

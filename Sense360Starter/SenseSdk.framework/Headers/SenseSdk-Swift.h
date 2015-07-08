@@ -279,6 +279,7 @@ SWIFT_CLASS("_TtC8SenseSdk10PoiTrigger")
 @end
 
 typedef SWIFT_ENUM(NSInteger, PoiType) {
+  PoiTypeAll = -1,
   PoiTypeAirport = 1,
   PoiTypeBar = 2,
   PoiTypeRestaurant = 3,
@@ -295,7 +296,6 @@ typedef SWIFT_ENUM(NSInteger, PoiType) {
   PoiTypeParking = 14,
   PoiTypeNightClub = 15,
   PoiTypeUniversity = 16,
-  PoiTypeUnknown = 9999,
 };
 
 @class TimeWindow;

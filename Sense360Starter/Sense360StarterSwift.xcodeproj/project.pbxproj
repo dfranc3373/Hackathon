@@ -19,9 +19,8 @@
 		33C0EF0F1B389F6C00AB5985 /* EnteredHomeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0EF0E1B389F6C00AB5985 /* EnteredHomeDetector.swift */; };
 		33C0EF111B38A47800AB5985 /* EnteredGeofenceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0EF101B38A47800AB5985 /* EnteredGeofenceDetector.swift */; };
 		33CFEE6F1B3CB9F40079E832 /* NotificationSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CFEE6E1B3CB9F40079E832 /* NotificationSender.swift */; };
-		96BF38D81B3CB2DA00277004 /* SenseSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BF38D71B3CB2DA00277004 /* SenseSdk.framework */; };
-		96BF38D91B3CB2E300277004 /* SenseSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BF38D71B3CB2DA00277004 /* SenseSdk.framework */; };
-		96BF38DA1B3CB2E300277004 /* SenseSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96BF38D71B3CB2DA00277004 /* SenseSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		965EA2AF1B4DDF9D0058C7C1 /* SenseSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965EA2AD1B4DDF920058C7C1 /* SenseSdk.framework */; };
+		965EA2B01B4DDF9D0058C7C1 /* SenseSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 965EA2AD1B4DDF920058C7C1 /* SenseSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		96BF38DE1B3CB66200277004 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BF38DD1B3CB66200277004 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +31,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				96BF38DA1B3CB2E300277004 /* SenseSdk.framework in Embed Frameworks */,
+				965EA2B01B4DDF9D0058C7C1 /* SenseSdk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,7 +53,7 @@
 		33C0EF0E1B389F6C00AB5985 /* EnteredHomeDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnteredHomeDetector.swift; sourceTree = "<group>"; };
 		33C0EF101B38A47800AB5985 /* EnteredGeofenceDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnteredGeofenceDetector.swift; sourceTree = "<group>"; };
 		33CFEE6E1B3CB9F40079E832 /* NotificationSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSender.swift; sourceTree = "<group>"; };
-		96BF38D71B3CB2DA00277004 /* SenseSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SenseSdk.framework; sourceTree = "<group>"; };
+		965EA2AD1B4DDF920058C7C1 /* SenseSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SenseSdk.framework; sourceTree = "<group>"; };
 		96BF38DD1B3CB66200277004 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -65,9 +64,8 @@
 			files = (
 				96BF38DE1B3CB66200277004 /* CoreMotion.framework in Frameworks */,
 				33C0EF021B3892FA00AB5985 /* libz.dylib in Frameworks */,
+				965EA2AF1B4DDF9D0058C7C1 /* SenseSdk.framework in Frameworks */,
 				33C0EF001B3892F100AB5985 /* SystemConfiguration.framework in Frameworks */,
-				96BF38D91B3CB2E300277004 /* SenseSdk.framework in Frameworks */,
-				96BF38D81B3CB2DA00277004 /* SenseSdk.framework in Frameworks */,
 				33C0EEFE1B3892EB00AB5985 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,7 +78,7 @@
 			children = (
 				96BF38DD1B3CB66200277004 /* CoreMotion.framework */,
 				33C0EF011B3892FA00AB5985 /* libz.dylib */,
-				96BF38D71B3CB2DA00277004 /* SenseSdk.framework */,
+				965EA2AD1B4DDF920058C7C1 /* SenseSdk.framework */,
 				33C0EEFF1B3892F100AB5985 /* SystemConfiguration.framework */,
 				33C0EEFD1B3892EB00AB5985 /* CoreLocation.framework */,
 				33C0EED81B3892B400AB5985 /* Sense360Starter */,
@@ -132,6 +130,7 @@
 				33C0EED31B3892B400AB5985 /* Frameworks */,
 				33C0EED41B3892B400AB5985 /* Resources */,
 				33C0EF051B38931D00AB5985 /* Embed Frameworks */,
+				965EA2AC1B4DDEF80058C7C1 /* Strip unused architectures */,
 			);
 			buildRules = (
 			);
@@ -191,6 +190,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		965EA2AC1B4DDEF80058C7C1 /* Strip unused architectures */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Strip unused architectures";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/\nAPP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script strips unused architectures\nfind \"$APP_PATH\" -name 'SenseSdk.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\ndone";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		33C0EED21B3892B400AB5985 /* Sources */ = {
