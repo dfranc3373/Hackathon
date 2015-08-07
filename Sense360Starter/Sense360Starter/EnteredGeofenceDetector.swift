@@ -43,9 +43,13 @@ class EnteredGeofenceDetector: RecipeFiredDelegate {
         NSLog("Recipe \(args.recipe.name) fired at \(args.timestamp).");
         for trigger in args.triggersFired {
             for place in trigger.places {
-                NSLog(place.description)
+
+                //This is where YOU write your custom code.
+                //As an example, we are sending a local notification that describes the transition type and place.
+                //For more information go to: http://sense360.com/docs.html#handling-a-recipe-firing
                 let transitionDesc = args.recipe.trigger.transitionType.description
                 NotificationSender.send("\(transitionDesc) \(place.description)")
+                
             }
         }
     }
