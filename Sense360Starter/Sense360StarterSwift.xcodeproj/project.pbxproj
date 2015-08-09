@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0795F76D010357DBE9310853 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9769A29DCA3E3C69CA80025B /* libPods.a */; };
+		231694D91B76BBC600BE639B /* OneShotLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231694D81B76BBC600BE639B /* OneShotLocationManager.swift */; };
+		231694DB1B76CE9600BE639B /* APIExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231694DA1B76CE9600BE639B /* APIExtention.swift */; };
+		234ACD541B76B151008FFB5B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 234ACD531B76B151008FFB5B /* Podfile */; };
 		332BEBF41B7577A00092ACA6 /* GPXFiles in Resources */ = {isa = PBXBuildFile; fileRef = 332BEBF31B7577A00092ACA6 /* GPXFiles */; };
 		33C0EEDC1B3892B400AB5985 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0EEDB1B3892B400AB5985 /* AppDelegate.swift */; };
 		33C0EEDE1B3892B400AB5985 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0EEDD1B3892B400AB5985 /* ViewController.swift */; };
@@ -40,7 +44,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		231694D71B76B78300BE639B /* Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		231694D81B76BBC600BE639B /* OneShotLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneShotLocationManager.swift; sourceTree = "<group>"; };
+		231694DA1B76CE9600BE639B /* APIExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIExtention.swift; sourceTree = "<group>"; };
+		234ACD531B76B151008FFB5B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		332BEBF31B7577A00092ACA6 /* GPXFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GPXFiles; sourceTree = "<group>"; };
+		33ACFBEBCA2F9DE9C9CD5118 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		33C0EED61B3892B400AB5985 /* Sense360StarterSwiftSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sense360StarterSwiftSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C0EEDA1B3892B400AB5985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33C0EEDB1B3892B400AB5985 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +66,8 @@
 		33CFEE6E1B3CB9F40079E832 /* NotificationSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSender.swift; sourceTree = "<group>"; };
 		965EA2AD1B4DDF920058C7C1 /* SenseSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SenseSdk.framework; sourceTree = "<group>"; };
 		96BF38DD1B3CB66200277004 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		9769A29DCA3E3C69CA80025B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECCD9323E3D3952D3625D3E3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +80,7 @@
 				965EA2AF1B4DDF9D0058C7C1 /* SenseSdk.framework in Frameworks */,
 				33C0EF001B3892F100AB5985 /* SystemConfiguration.framework in Frameworks */,
 				33C0EEFE1B3892EB00AB5985 /* CoreLocation.framework in Frameworks */,
+				0795F76D010357DBE9310853 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +90,8 @@
 		33C0EECD1B3892B400AB5985 = {
 			isa = PBXGroup;
 			children = (
+				231694D81B76BBC600BE639B /* OneShotLocationManager.swift */,
+				234ACD531B76B151008FFB5B /* Podfile */,
 				96BF38DD1B3CB66200277004 /* CoreMotion.framework */,
 				33C0EF011B3892FA00AB5985 /* libz.dylib */,
 				965EA2AD1B4DDF920058C7C1 /* SenseSdk.framework */,
@@ -85,6 +99,8 @@
 				33C0EEFD1B3892EB00AB5985 /* CoreLocation.framework */,
 				33C0EED81B3892B400AB5985 /* Sense360Starter */,
 				33C0EED71B3892B400AB5985 /* Products */,
+				7B228C4918602806BA2E5F0D /* Pods */,
+				4D2355D0AC800352C04CB654 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,9 +123,11 @@
 				33C0EEE41B3892B400AB5985 /* LaunchScreen.xib */,
 				33C0EED91B3892B400AB5985 /* Supporting Files */,
 				33C0EF0A1B3896B300AB5985 /* EnteredRestaurantDetector.swift */,
+				231694DA1B76CE9600BE639B /* APIExtention.swift */,
 				33C0EF0E1B389F6C00AB5985 /* EnteredHomeDetector.swift */,
 				33C0EF101B38A47800AB5985 /* EnteredGeofenceDetector.swift */,
 				33CFEE6E1B3CB9F40079E832 /* NotificationSender.swift */,
+				231694D71B76B78300BE639B /* Swift-Bridging-Header.h */,
 			);
 			path = Sense360Starter;
 			sourceTree = "<group>";
@@ -122,6 +140,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4D2355D0AC800352C04CB654 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9769A29DCA3E3C69CA80025B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B228C4918602806BA2E5F0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33ACFBEBCA2F9DE9C9CD5118 /* Pods.debug.xcconfig */,
+				ECCD9323E3D3952D3625D3E3 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,11 +164,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33C0EEF51B3892B400AB5985 /* Build configuration list for PBXNativeTarget "Sense360StarterSwift" */;
 			buildPhases = (
+				4C931F61E7AB6B405FD31BFF /* Check Pods Manifest.lock */,
 				33C0EED21B3892B400AB5985 /* Sources */,
 				33C0EED31B3892B400AB5985 /* Frameworks */,
 				33C0EED41B3892B400AB5985 /* Resources */,
 				33C0EF051B38931D00AB5985 /* Embed Frameworks */,
 				965EA2AC1B4DDEF80058C7C1 /* Strip unused architectures */,
+				B5B841CD1082DB5F5CC62345 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				234ACD541B76B151008FFB5B /* Podfile in Resources */,
 				33C0EEE11B3892B400AB5985 /* Main.storyboard in Resources */,
 				33C0EEE61B3892B400AB5985 /* LaunchScreen.xib in Resources */,
 				332BEBF41B7577A00092ACA6 /* GPXFiles in Resources */,
@@ -196,6 +234,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4C931F61E7AB6B405FD31BFF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		965EA2AC1B4DDEF80058C7C1 /* Strip unused architectures */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,6 +263,21 @@
 			shellPath = /bin/sh;
 			shellScript = "# http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/\nAPP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script strips unused architectures\nfind \"$APP_PATH\" -name 'SenseSdk.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\ndone";
 		};
+		B5B841CD1082DB5F5CC62345 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -221,6 +289,8 @@
 				33C0EF111B38A47800AB5985 /* EnteredGeofenceDetector.swift in Sources */,
 				33C0EF0F1B389F6C00AB5985 /* EnteredHomeDetector.swift in Sources */,
 				33CFEE6F1B3CB9F40079E832 /* NotificationSender.swift in Sources */,
+				231694D91B76BBC600BE639B /* OneShotLocationManager.swift in Sources */,
+				231694DB1B76CE9600BE639B /* APIExtention.swift in Sources */,
 				33C0EEDE1B3892B400AB5985 /* ViewController.swift in Sources */,
 				33C0EEDC1B3892B400AB5985 /* AppDelegate.swift in Sources */,
 			);
@@ -331,6 +401,7 @@
 		};
 		33C0EEF61B3892B400AB5985 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33ACFBEBCA2F9DE9C9CD5118 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -340,11 +411,13 @@
 				INFOPLIST_FILE = Sense360Starter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Sense360StarterSwiftSwift;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Sense360Starter/Swift-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		33C0EEF71B3892B400AB5985 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECCD9323E3D3952D3625D3E3 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -354,6 +427,7 @@
 				INFOPLIST_FILE = Sense360Starter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Sense360StarterSwiftSwift;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Sense360Starter/Swift-Bridging-Header.h";
 			};
 			name = Release;
 		};

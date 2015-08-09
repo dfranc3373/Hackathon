@@ -3,10 +3,10 @@ var Schema = mongoose.Schema;
  
 module.exports = mongoose.model('User',{
     
-    UDID: String,
-    LocationID: String,
+    UDID: { index: true, type: String },
+    LocationID: { index: true, type: String },
 	LocationName: String,
-    TypeOfLocation: String,
+    TypeOfLocation: { index: true, type: String },
     WhenTheyArrived: Date,
     WhenTheyLeft: Date
     

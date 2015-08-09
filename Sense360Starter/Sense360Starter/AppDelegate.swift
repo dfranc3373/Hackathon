@@ -8,13 +8,20 @@
 
 import UIKit
 import SenseSdk
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let api = "AIzaSyDCzqI9TzdvhIxLXRxH2SfZODNXlVVuyZw";
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        GMSServices.provideAPIKey(api);
+        
+        //GSMServices.providedAPIKey("AIzaSyDCzqI9TzdvhIxLXRxH2SfZODNXlVVuyZw");
         // Replace with your app key provided by Sense360
         SenseSdk.enableSdkWithKey("app_key_goes_here")
         

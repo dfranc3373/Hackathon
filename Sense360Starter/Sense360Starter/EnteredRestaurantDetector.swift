@@ -8,10 +8,21 @@
 
 import UIKit
 import SenseSdk
+import GoogleMaps
 
 class EnteredRestaurantDetector: RecipeFiredDelegate {
+    
+    //var locationManager: CLLocationManager = CLLocationManager()
+    
+    var placesClient: GMSPlacesClient?
+    
+    let api = APIExtension(shouldAppCrowdSource: true);
 
     func restaurantDetectionStart() {
+        
+        //locationManager.requestWhenInUseAuthorization()
+        //locationManager.requestAlwaysAuthorization()
+        
         let errorPointer = SenseSdkErrorPointer.create()
         // Fire when the user enters a restaurant
         let trigger = FireTrigger.whenEntersPoi(.Restaurant, errorPtr: errorPointer)
@@ -41,7 +52,11 @@ class EnteredRestaurantDetector: RecipeFiredDelegate {
         NSLog("Recipe \(args.recipe.name) fired at \(args.timestamp).");
         for trigger in args.triggersFired {
             for place in trigger.places {
+                
+                NSLog("Latitude: \(place.location.latitude) Longitude \(place.location.longitude)");
 
+                api.crowdSource(place.location.latitude, longitude: place.location.longitude, type: "resturant", arriving: true)
+                
                 //This is where YOU write your custom code.  
                 //As an example, we are sending a local notification that describes the transition type and place.
                 //For more information go to: http://sense360.com/docs.html#handling-a-recipe-firing

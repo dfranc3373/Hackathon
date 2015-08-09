@@ -17,9 +17,30 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var geofenceButton: UIButton!
     
+    var manager: OneShotLocationManager?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        manager = OneShotLocationManager()
+        manager!.fetchWithCompletion {location, error in
+            
+            // fetch location or an error
+            if let loc = location {
+                println(location)
+            } else if let err = error {
+                println(err.localizedDescription)
+            }
+            
+            self.manager = nil
+            
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

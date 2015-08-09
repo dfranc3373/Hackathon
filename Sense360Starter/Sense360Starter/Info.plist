@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.sense360.ios.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>com.sense360hackathon.ios.$(PRODUCT_NAME:rfc1034identifier)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -24,6 +24,8 @@
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Tell your users how you will use their location in the background.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need to know your location to show you the coordinates where you are located</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
