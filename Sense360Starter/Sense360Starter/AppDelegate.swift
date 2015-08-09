@@ -23,16 +23,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //GSMServices.providedAPIKey("AIzaSyDCzqI9TzdvhIxLXRxH2SfZODNXlVVuyZw");
         // Replace with your app key provided by Sense360
-        SenseSdk.enableSdkWithKey("app_key_goes_here")
+        SenseSdk.enableSdkWithKey("ILoveMilkAndCookies")
         
         // Create the Restaurant POI Type
         EnteredRestaurantDetector().restaurantDetectionStart()
         
-        // Create the Home Personal Place Type
-        EnteredHomeDetector().homeDetectionStart()
+        EnteredAirportDetector().airportDetectionStart()
         
-        // Create a custom geofence
-        EnteredGeofenceDetector().geofenceDetectionStart()
+        EnteredBarDetector().barDetectionStart()
+        
+        EnteredGymDetector().gymDetectionStart()
         
         
         //...Any other code that should run on launch...//

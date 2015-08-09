@@ -10,6 +10,9 @@
 		0795F76D010357DBE9310853 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9769A29DCA3E3C69CA80025B /* libPods.a */; };
 		231694D91B76BBC600BE639B /* OneShotLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231694D81B76BBC600BE639B /* OneShotLocationManager.swift */; };
 		231694DB1B76CE9600BE639B /* APIExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231694DA1B76CE9600BE639B /* APIExtention.swift */; };
+		231694DD1B772B6B00BE639B /* EnteredBarDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231694DC1B772B6B00BE639B /* EnteredBarDetector.swift */; };
+		231694DF1B7732F900BE639B /* EnteredGymDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231694DE1B7732F900BE639B /* EnteredGymDetector.swift */; };
+		231694E11B77335E00BE639B /* EnteredAirportDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231694E01B77335E00BE639B /* EnteredAirportDetector.swift */; };
 		234ACD541B76B151008FFB5B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 234ACD531B76B151008FFB5B /* Podfile */; };
 		332BEBF41B7577A00092ACA6 /* GPXFiles in Resources */ = {isa = PBXBuildFile; fileRef = 332BEBF31B7577A00092ACA6 /* GPXFiles */; };
 		33C0EEDC1B3892B400AB5985 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0EEDB1B3892B400AB5985 /* AppDelegate.swift */; };
@@ -21,8 +24,6 @@
 		33C0EF001B3892F100AB5985 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C0EEFF1B3892F100AB5985 /* SystemConfiguration.framework */; };
 		33C0EF021B3892FA00AB5985 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C0EF011B3892FA00AB5985 /* libz.dylib */; };
 		33C0EF0B1B3896B300AB5985 /* EnteredRestaurantDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0EF0A1B3896B300AB5985 /* EnteredRestaurantDetector.swift */; };
-		33C0EF0F1B389F6C00AB5985 /* EnteredHomeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0EF0E1B389F6C00AB5985 /* EnteredHomeDetector.swift */; };
-		33C0EF111B38A47800AB5985 /* EnteredGeofenceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0EF101B38A47800AB5985 /* EnteredGeofenceDetector.swift */; };
 		33CFEE6F1B3CB9F40079E832 /* NotificationSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CFEE6E1B3CB9F40079E832 /* NotificationSender.swift */; };
 		965EA2AF1B4DDF9D0058C7C1 /* SenseSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965EA2AD1B4DDF920058C7C1 /* SenseSdk.framework */; };
 		965EA2B01B4DDF9D0058C7C1 /* SenseSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 965EA2AD1B4DDF920058C7C1 /* SenseSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -47,6 +48,9 @@
 		231694D71B76B78300BE639B /* Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		231694D81B76BBC600BE639B /* OneShotLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneShotLocationManager.swift; sourceTree = "<group>"; };
 		231694DA1B76CE9600BE639B /* APIExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIExtention.swift; sourceTree = "<group>"; };
+		231694DC1B772B6B00BE639B /* EnteredBarDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnteredBarDetector.swift; sourceTree = "<group>"; };
+		231694DE1B7732F900BE639B /* EnteredGymDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnteredGymDetector.swift; sourceTree = "<group>"; };
+		231694E01B77335E00BE639B /* EnteredAirportDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnteredAirportDetector.swift; sourceTree = "<group>"; };
 		234ACD531B76B151008FFB5B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		332BEBF31B7577A00092ACA6 /* GPXFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GPXFiles; sourceTree = "<group>"; };
 		33ACFBEBCA2F9DE9C9CD5118 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,8 +65,6 @@
 		33C0EEFF1B3892F100AB5985 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		33C0EF011B3892FA00AB5985 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		33C0EF0A1B3896B300AB5985 /* EnteredRestaurantDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnteredRestaurantDetector.swift; sourceTree = "<group>"; };
-		33C0EF0E1B389F6C00AB5985 /* EnteredHomeDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnteredHomeDetector.swift; sourceTree = "<group>"; };
-		33C0EF101B38A47800AB5985 /* EnteredGeofenceDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnteredGeofenceDetector.swift; sourceTree = "<group>"; };
 		33CFEE6E1B3CB9F40079E832 /* NotificationSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSender.swift; sourceTree = "<group>"; };
 		965EA2AD1B4DDF920058C7C1 /* SenseSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SenseSdk.framework; sourceTree = "<group>"; };
 		96BF38DD1B3CB66200277004 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -122,10 +124,11 @@
 				33C0EEE21B3892B400AB5985 /* Images.xcassets */,
 				33C0EEE41B3892B400AB5985 /* LaunchScreen.xib */,
 				33C0EED91B3892B400AB5985 /* Supporting Files */,
+				231694E01B77335E00BE639B /* EnteredAirportDetector.swift */,
+				231694DC1B772B6B00BE639B /* EnteredBarDetector.swift */,
 				33C0EF0A1B3896B300AB5985 /* EnteredRestaurantDetector.swift */,
+				231694DE1B7732F900BE639B /* EnteredGymDetector.swift */,
 				231694DA1B76CE9600BE639B /* APIExtention.swift */,
-				33C0EF0E1B389F6C00AB5985 /* EnteredHomeDetector.swift */,
-				33C0EF101B38A47800AB5985 /* EnteredGeofenceDetector.swift */,
 				33CFEE6E1B3CB9F40079E832 /* NotificationSender.swift */,
 				231694D71B76B78300BE639B /* Swift-Bridging-Header.h */,
 			);
@@ -286,13 +289,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				33C0EF0B1B3896B300AB5985 /* EnteredRestaurantDetector.swift in Sources */,
-				33C0EF111B38A47800AB5985 /* EnteredGeofenceDetector.swift in Sources */,
-				33C0EF0F1B389F6C00AB5985 /* EnteredHomeDetector.swift in Sources */,
+				231694DD1B772B6B00BE639B /* EnteredBarDetector.swift in Sources */,
+				231694DF1B7732F900BE639B /* EnteredGymDetector.swift in Sources */,
 				33CFEE6F1B3CB9F40079E832 /* NotificationSender.swift in Sources */,
 				231694D91B76BBC600BE639B /* OneShotLocationManager.swift in Sources */,
 				231694DB1B76CE9600BE639B /* APIExtention.swift in Sources */,
 				33C0EEDE1B3892B400AB5985 /* ViewController.swift in Sources */,
 				33C0EEDC1B3892B400AB5985 /* AppDelegate.swift in Sources */,
+				231694E11B77335E00BE639B /* EnteredAirportDetector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class APIExtension {
     
@@ -22,16 +23,18 @@ class APIExtension {
         
         if(crowdSourceData) {
         
-            let urlPath: String = "192.168.7.244:3000/SetUserLocation";
+            let urlPath: String = "https://tranquil-plateau-5792.herokuapp.com/SetUserLocation";
             var url: NSURL = NSURL(string: urlPath)!
             var request1: NSMutableURLRequest = NSMutableURLRequest(URL: url)
             
             var timestamp: Double
             
             timestamp = NSDate().timeIntervalSince1970
+            
+            let UDID = UIDevice.currentDevice().identifierForVendor.UUIDString
         
             request1.HTTPMethod = "POST"
-            var stringPost="latitude=\(latitude)&longitude=\(longitude)&type=\(type)&WhenTheyArrived=\((arriving ? timestamp : 0))&WhenTheyLeft=\((!arriving ? timestamp : 0))" // Key and Value
+            var stringPost="UDID=\(UDID)&latitude=\(latitude)&longitude=\(longitude)&type=\(type)&WhenTheyArrived=\((arriving ? timestamp : 0))&WhenTheyLeft=\((!arriving ? timestamp : 0))" // Key and Value
         
             let data = stringPost.dataUsingEncoding(NSUTF8StringEncoding)
         
@@ -44,7 +47,9 @@ class APIExtension {
             NSURLConnection.sendAsynchronousRequest(request1, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
                 var err: NSError
                 
-                if(response != nil) {
+                let httpResponse = response as! NSHTTPURLResponse
+                
+                if(httpResponse.statusCode == 200) {
                 
                     var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
                     println("AsSynchronous\(jsonResult)")

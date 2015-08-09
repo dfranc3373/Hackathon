@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,48 +17,116 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8L-yi-fFy">
-                                <rect key="frame" x="213" y="212" width="174" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8L-yi-fFy">
+                                <rect key="frame" x="213" y="50" width="174" height="30"/>
                                 <state key="normal" title="Trigger Restaurant Arrival">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="triggerRestaurant:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lAo-dL-Efh"/>
+                                    <action selector="triggerEnterRestaurant:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RBJ-mV-UZ5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzE-Ed-zDq">
-                                <rect key="frame" x="230" y="285" width="140" height="30"/>
-                                <state key="normal" title="Trigger Home Arrival">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzE-Ed-zDq">
+                                <rect key="frame" x="230" y="147" width="140" height="30"/>
+                                <state key="normal" title="Trigger Bar Arrival">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="triggerHome:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aAN-iq-kZy"/>
+                                    <action selector="triggerEnterBar:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IQu-tx-51u"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQV-Qe-sRk">
-                                <rect key="frame" x="218" y="357" width="165" height="30"/>
-                                <state key="normal" title="Trigger Geofence Arrival">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9w-XY-PAk">
+                                <rect key="frame" x="230" y="192" width="140" height="30"/>
+                                <state key="normal" title="Trigger Bar Depart">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="triggerGeofence:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oqr-1X-h26"/>
+                                    <action selector="triggerLeaveBar:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tQu-Zu-872"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQV-Qe-sRk">
+                                <rect key="frame" x="218" y="240" width="165" height="30"/>
+                                <state key="normal" title="Trigger Gym Arrival">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="triggerEnterGym:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yvY-d5-0jw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yl6-3x-pna">
+                                <rect key="frame" x="218" y="285" width="165" height="30"/>
+                                <state key="normal" title="Trigger Gym Depart">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="triggerLeaveGym:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="S0I-RV-Q50"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scz-ov-6kb">
+                                <rect key="frame" x="218" y="330" width="165" height="30"/>
+                                <state key="normal" title="Trigger Airport Arrival">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="triggerEnterAirport:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QfB-6Q-vwy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXQ-Wh-FZr">
+                                <rect key="frame" x="218" y="375" width="165" height="30"/>
+                                <state key="normal" title="Trigger Airport Depart">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="triggerLeaveAirport:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Otj-I5-LCv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgl-CI-jrw">
+                                <rect key="frame" x="206" y="101" width="188" height="30"/>
+                                <state key="normal" title="Trigger Restaurant Depart">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="triggerLeaveRestaurant:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="G0f-z6-mek"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Z8L-yi-fFy" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="212" id="Nwe-aW-RP4"/>
-                            <constraint firstAttribute="centerX" secondItem="mzE-Ed-zDq" secondAttribute="centerX" id="cUK-OM-k4A"/>
-                            <constraint firstItem="mzE-Ed-zDq" firstAttribute="top" secondItem="Z8L-yi-fFy" secondAttribute="bottom" constant="43" id="fNH-ej-xsv"/>
-                            <constraint firstItem="zQV-Qe-sRk" firstAttribute="top" secondItem="mzE-Ed-zDq" secondAttribute="bottom" constant="42" id="iZC-R0-3oB"/>
-                            <constraint firstAttribute="centerX" secondItem="zQV-Qe-sRk" secondAttribute="centerX" constant="-0.5" id="mSi-a1-Gca"/>
-                            <constraint firstAttribute="centerX" secondItem="Z8L-yi-fFy" secondAttribute="centerX" id="xaI-BX-cNC"/>
+                            <constraint firstItem="zQV-Qe-sRk" firstAttribute="top" secondItem="f9w-XY-PAk" secondAttribute="bottom" constant="20" id="11d-YG-wbP"/>
+                            <constraint firstItem="tXQ-Wh-FZr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="8" id="7cP-HN-ohZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f9w-XY-PAk" secondAttribute="trailing" constant="8" id="8u9-ph-4Os"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mzE-Ed-zDq" secondAttribute="trailing" constant="8" id="ACo-vd-bJA"/>
+                            <constraint firstItem="mzE-Ed-zDq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="8" id="EfR-cg-8Fo"/>
+                            <constraint firstItem="Z8L-yi-fFy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="8" id="EuV-8v-CKS"/>
+                            <constraint firstItem="f9w-XY-PAk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="8" id="OjE-PF-ABc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tXQ-Wh-FZr" secondAttribute="trailing" constant="8" id="S3z-fR-HWD"/>
+                            <constraint firstItem="Yl6-3x-pna" firstAttribute="top" secondItem="zQV-Qe-sRk" secondAttribute="bottom" constant="20" id="Swj-Fw-2OA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zQV-Qe-sRk" secondAttribute="trailing" constant="8" id="V7r-x6-7bY"/>
+                            <constraint firstItem="Scz-ov-6kb" firstAttribute="top" secondItem="Yl6-3x-pna" secondAttribute="bottom" constant="20" id="Y0M-UH-YT3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lgl-CI-jrw" secondAttribute="trailing" constant="8" id="ZxH-7Y-BBS"/>
+                            <constraint firstItem="Lgl-CI-jrw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="8" id="bWF-tk-MAP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Scz-ov-6kb" secondAttribute="trailing" constant="8" id="eM5-o2-wVk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yl6-3x-pna" secondAttribute="trailing" constant="8" id="fSa-wu-qKU"/>
+                            <constraint firstItem="tXQ-Wh-FZr" firstAttribute="top" secondItem="Scz-ov-6kb" secondAttribute="bottom" constant="20" id="irD-e4-xJY"/>
+                            <constraint firstItem="mzE-Ed-zDq" firstAttribute="top" secondItem="Lgl-CI-jrw" secondAttribute="bottom" constant="20" id="jRp-ha-qvz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z8L-yi-fFy" secondAttribute="trailing" constant="8" id="l1u-v0-GWN"/>
+                            <constraint firstItem="Yl6-3x-pna" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="8" id="pSr-Jz-i01"/>
+                            <constraint firstItem="Lgl-CI-jrw" firstAttribute="top" secondItem="Z8L-yi-fFy" secondAttribute="bottom" constant="20" id="qzm-sw-FTE"/>
+                            <constraint firstItem="Z8L-yi-fFy" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="rQd-SN-2FQ"/>
+                            <constraint firstItem="Scz-ov-6kb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="8" id="sBj-sX-HWx"/>
+                            <constraint firstItem="f9w-XY-PAk" firstAttribute="top" secondItem="mzE-Ed-zDq" secondAttribute="bottom" constant="20" id="uaU-aE-Yug"/>
+                            <constraint firstItem="zQV-Qe-sRk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="8" id="zBj-8Q-Qhs"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="geofenceButton" destination="zQV-Qe-sRk" id="qQv-5c-OJQ"/>
-                        <outlet property="homeButton" destination="mzE-Ed-zDq" id="Wk7-WM-Fg4"/>
-                        <outlet property="restaurantButton" destination="Z8L-yi-fFy" id="Oad-IY-Kkq"/>
+                        <outlet property="airportArrive" destination="Scz-ov-6kb" id="WXe-vP-4zJ"/>
+                        <outlet property="airportDepart" destination="tXQ-Wh-FZr" id="Ldu-Lp-D4N"/>
+                        <outlet property="barArrive" destination="mzE-Ed-zDq" id="iLx-QV-K1n"/>
+                        <outlet property="barDepart" destination="f9w-XY-PAk" id="8Y4-ff-1ma"/>
+                        <outlet property="gymArrive" destination="zQV-Qe-sRk" id="Pcc-WZ-sEm"/>
+                        <outlet property="gymDepart" destination="Yl6-3x-pna" id="pX1-aD-9f7"/>
+                        <outlet property="restaurantArrive" destination="Z8L-yi-fFy" id="w3B-b4-w1V"/>
+                        <outlet property="restaurantDepart" destination="Lgl-CI-jrw" id="GFO-Ni-6ed"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

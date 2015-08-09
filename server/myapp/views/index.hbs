@@ -1,2 +1,84 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      html, body, #map-canvas { height: 90%; margin: 0; padding: 0;}
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkkhYPSXusUtLT-gavCirzlS9mqwv93yE&libraries=visualization">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        
+    var map, pointarray, heatmap;
+        
+      function initialize() {
+        heatmap = new google.maps.visualization.HeatmapLayer({
+                        radius: 30
+                    });
+        var mapOptions = {
+          center: { lat: 34.020479, lng: -118.3416947},
+          zoom: 11
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+          
+        window.setInterval(function() {
+            
+            $.ajax({ url: "/GetNumberOfUsersAtAllLocations", method: "POST", success: function(call) {
+                
+                var html = "";
+
+                var Data = [];
+                
+                for(var i in JSON.parse(call)) {
+                    
+                    var location = JSON.parse(call);
+                    
+                    var marker = new google.maps.Marker({
+                          position: new google.maps.LatLng(location[i].Latitude, location[i].Longitude),
+                          map: map
+                        });
+                    
+                    html += location[i].LocationName + ": " + location[i].Count + "<br />";
+                    
+                    for(count = 0; location[i].Count >= count; count++) {
+                    
+                        Data.push(new google.maps.LatLng(location[i].Latitude, location[i].Longitude));
+
+                    }
+                    
+                    console.log(call);
+                    
+                }
+
+                    var pointArray = new google.maps.MVCArray(Data);
+                
+                    heatmap.setMap(null);
+
+                    heatmap = new google.maps.visualization.HeatmapLayer({
+                        data: pointArray,
+                        radius: 30
+                    });
+
+                    heatmap.setMap(map);
+                
+                    $("#locations").html(html);
+                
+                }
+                   
+            });
+            
+        }, 1000);
+ 
+      }
+        
+      google.maps.event.addDomListener(window, 'load', initialize);
+ 
+    </script>
+  </head>
+  <body>
+<div id="map-canvas"></div>
+<div id="locations"></div>
+  </body>
+</html>

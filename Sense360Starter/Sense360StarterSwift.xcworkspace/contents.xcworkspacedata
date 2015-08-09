@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Sense360Starter/EnteredAirportDetector.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Sense360Starter/EnteredGymDetector.swift">
+   </FileRef>
+   <FileRef
       location = "group:Sense360StarterSwift.xcodeproj">
    </FileRef>
    <FileRef

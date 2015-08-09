@@ -10,15 +10,15 @@ import UIKit
 import SenseSdk
 import GoogleMaps
 
-class EnteredRestaurantDetector: RecipeFiredDelegate {
+class EnteredAirportDetector: RecipeFiredDelegate {
     
     //var locationManager: CLLocationManager = CLLocationManager()
     
     var placesClient: GMSPlacesClient?
     
     let api = APIExtension(shouldAppCrowdSource: true);
-
-    func restaurantDetectionStart() {
+    
+    func airportDetectionStart() {
         
         //locationManager.requestWhenInUseAuthorization()
         //locationManager.requestAlwaysAuthorization()
@@ -29,7 +29,7 @@ class EnteredRestaurantDetector: RecipeFiredDelegate {
         
         if let restaurantTrigger = trigger {
             // Recipe defines what trigger, what time of day and how long to wait between consecutive firings
-            let restaurantRecipe = Recipe(name: "ArrivedAtRestaurant",
+            let restaurantRecipe = Recipe(name: "ArrivedAtAirport",
                 trigger: restaurantTrigger,
                 // Do NOT restrict the firing to a particular time of day
                 timeWindow: TimeWindow.allDay,
@@ -44,7 +44,7 @@ class EnteredRestaurantDetector: RecipeFiredDelegate {
         
         if let restaurantTrigger = trigger {
             // Recipe defines what trigger, what time of day and how long to wait between consecutive firings
-            let restaurantRecipe = Recipe(name: "LeftRestaurant",
+            let restaurantRecipe = Recipe(name: "LeftAirport",
                 trigger: restaurantTrigger,
                 // Do NOT restrict the firing to a particular time of day
                 timeWindow: TimeWindow.allDay,
@@ -69,18 +69,18 @@ class EnteredRestaurantDetector: RecipeFiredDelegate {
             for place in trigger.places {
                 
                 NSLog("Latitude: \(place.location.latitude) Longitude \(place.location.longitude)");
-
-                if(args.recipe.name == "LeftRestaurant") {
+                
+                if(args.recipe.name == "LeftAirport") {
                     
-                    api.crowdSource(place.location.latitude, longitude: place.location.longitude, type: "restaurant", arriving: false)
+                    api.crowdSource(place.location.latitude, longitude: place.location.longitude, type: "airport", arriving: false)
                     
                 } else {
-                
-                    api.crowdSource(place.location.latitude, longitude: place.location.longitude, type: "restaurant", arriving: true)
+                    
+                    api.crowdSource(place.location.latitude, longitude: place.location.longitude, type: "airport", arriving: true)
                     
                 }
                 
-                //This is where YOU write your custom code.  
+                //This is where YOU write your custom code.
                 //As an example, we are sending a local notification that describes the transition type and place.
                 //For more information go to: http://sense360.com/docs.html#handling-a-recipe-firing
                 let transitionDesc = args.recipe.trigger.transitionType.description

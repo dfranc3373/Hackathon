@@ -11,11 +11,21 @@ import SenseSdk
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var restaurantButton: UIButton!
+    @IBOutlet weak var restaurantArrive: UIButton!
     
-    @IBOutlet weak var homeButton: UIButton!
+    @IBOutlet weak var restaurantDepart: UIButton!
     
-    @IBOutlet weak var geofenceButton: UIButton!
+    @IBOutlet weak var barArrive: UIButton!
+    
+    @IBOutlet weak var barDepart: UIButton!
+    
+    @IBOutlet weak var gymArrive: UIButton!
+    
+    @IBOutlet weak var gymDepart: UIButton!
+    
+    @IBOutlet weak var airportArrive: UIButton!
+    
+    @IBOutlet weak var airportDepart: UIButton!
     
     var manager: OneShotLocationManager?
     
@@ -48,9 +58,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func triggerRestaurant(sender: UIButton) {
+    @IBAction func triggerEnterRestaurant(sender: UIButton) {
         // Test info
-        let place = PoiPlace(latitude: 34.111, longitude: -118.111, radius: 50, name: "Big Restaurant", id: "id1", types: [.Restaurant])
+        let place = PoiPlace(latitude: 33.9982588, longitude: -118.477932834, radius: 50, name: "La Cabana", id: "id1", types: [.Restaurant])
         
         let errorPointer = SenseSdkErrorPointer.create()
         // This method should only be used for testing
@@ -65,16 +75,15 @@ class ViewController: UIViewController {
             NSLog("Error sending trigger")
         }
     }
-    @IBAction func triggerHome(sender: UIButton) {
-        
+    
+    @IBAction func triggerLeaveRestaurant(sender: UIButton) {
         // Test info
-        
-        let place = PersonalizedPlace(latitude: 34.111, longitude: -118.111, radius: 50, personalizedPlaceType: .Home)
+        let place = PoiPlace(latitude: 33.9982588, longitude: -118.477932834, radius: 50, name: "La Cabana", id: "id1", types: [.Restaurant])
         
         let errorPointer = SenseSdkErrorPointer.create()
         // This method should only be used for testing
         SenseSdkTestUtility.fireTrigger(
-            fromRecipe: "ArrivedAtHome",
+            fromRecipe: "LeftRestaurant",
             confidenceLevel: ConfidenceLevel.Medium,
             places: [place],
             errorPtr: errorPointer
@@ -85,30 +94,116 @@ class ViewController: UIViewController {
         }
     }
 
-    @IBAction func triggerGeofence(sender: UIButton) {
-        
-        // Create two geofences
-        let hq = CustomGeofence(latitude: 37.124, longitude: -127.456, radius: 50, customIdentifier: "Sense 360 Headquarters")
-        let lunchSpot = CustomGeofence(latitude: 37.124, longitude: -127.456, radius: 50, customIdentifier: "A&B Bar and Grill")
+    
+    @IBAction func triggerEnterAirport(sender: UIButton) {
+        // Test info
+        let place = PoiPlace(latitude: 34.0175514, longitude: -118.4474779, radius: 50, name: "Santa Monica Airport", id: "id1", types: [.Restaurant])
         
         let errorPointer = SenseSdkErrorPointer.create()
-        if errorPointer.error != nil {
-            NSLog("Error!: \(errorPointer.error.message)")
-        }
-        
-        
         // This method should only be used for testing
         SenseSdkTestUtility.fireTrigger(
-            fromRecipe: "ArrivedAtGeofence",
+            fromRecipe: "ArrivedAtAirport",
             confidenceLevel: ConfidenceLevel.Medium,
-            places: [hq, lunchSpot],
+            places: [place],
             errorPtr: errorPointer
         )
         
         if errorPointer.error != nil {
             NSLog("Error sending trigger")
         }
-        
     }
+    
+    @IBAction func triggerLeaveAirport(sender: UIButton) {
+        // Test info
+        let place = PoiPlace(latitude: 34.0175514, longitude: -118.4474779, radius: 50, name: "Santa Monica Airport", id: "id1", types: [.Restaurant])
+        
+        let errorPointer = SenseSdkErrorPointer.create()
+        // This method should only be used for testing
+        SenseSdkTestUtility.fireTrigger(
+            fromRecipe: "LeftAirport",
+            confidenceLevel: ConfidenceLevel.Medium,
+            places: [place],
+            errorPtr: errorPointer
+        )
+        
+        if errorPointer.error != nil {
+            NSLog("Error sending trigger")
+        }
+    }
+    
+    
+    @IBAction func triggerEnterBar(sender: UIButton) {
+        // Test info
+        let place = PoiPlace(latitude: 34.0218198, longitude: -118.4392382, radius: 50, name: "Gabes", id: "id1", types: [.Restaurant])
+        
+        let errorPointer = SenseSdkErrorPointer.create()
+        // This method should only be used for testing
+        SenseSdkTestUtility.fireTrigger(
+            fromRecipe: "ArrivedAtBar",
+            confidenceLevel: ConfidenceLevel.Medium,
+            places: [place],
+            errorPtr: errorPointer
+        )
+        
+        if errorPointer.error != nil {
+            NSLog("Error sending trigger")
+        }
+    }
+    
+    @IBAction func triggerLeaveBar(sender: UIButton) {
+        // Test info
+        let place = PoiPlace(latitude: 34.0218198, longitude: -118.4392382, radius: 50, name: "Gabes", id: "id1", types: [.Restaurant])
+        
+        let errorPointer = SenseSdkErrorPointer.create()
+        // This method should only be used for testing
+        SenseSdkTestUtility.fireTrigger(
+            fromRecipe: "LeftBar",
+            confidenceLevel: ConfidenceLevel.Medium,
+            places: [place],
+            errorPtr: errorPointer
+        )
+        
+        if errorPointer.error != nil {
+            NSLog("Error sending trigger")
+        }
+    }
+    
+    
+    @IBAction func triggerEnterGym(sender: UIButton) {
+        // Test info
+        let place = PoiPlace(latitude: 34.0187608, longitude: -118.424604, radius: 50, name: "Gym", id: "id1", types: [.Restaurant])
+        
+        let errorPointer = SenseSdkErrorPointer.create()
+        // This method should only be used for testing
+        SenseSdkTestUtility.fireTrigger(
+            fromRecipe: "ArrivedAtGym",
+            confidenceLevel: ConfidenceLevel.Medium,
+            places: [place],
+            errorPtr: errorPointer
+        )
+        
+        if errorPointer.error != nil {
+            NSLog("Error sending trigger")
+        }
+    }
+    
+    @IBAction func triggerLeaveGym(sender: UIButton) {
+        // Test info
+        let place = PoiPlace(latitude: 34.0187608, longitude: -118.424604, radius: 50, name: "Gym", id: "id1", types: [.Restaurant])
+        
+        let errorPointer = SenseSdkErrorPointer.create()
+        // This method should only be used for testing
+        SenseSdkTestUtility.fireTrigger(
+            fromRecipe: "LeftGym",
+            confidenceLevel: ConfidenceLevel.Medium,
+            places: [place],
+            errorPtr: errorPointer
+        )
+        
+        if errorPointer.error != nil {
+            NSLog("Error sending trigger")
+        }
+    }
+    
 }
 
