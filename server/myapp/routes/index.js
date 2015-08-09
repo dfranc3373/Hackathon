@@ -322,11 +322,11 @@ router.post('/GetLeastBusyPlaceTown', function(req, res) {
 
             var type = text.substr(0, text.indexOf(','));
 
-            if(type.toLowerCase() == "restaurant") {
+            if(type.toLowerCase() == "restaurant" || type.toLowerCase() == "restaurants") {
 
                 type = "food";
 
-            } else if(type.toLowerCase() == "bar") {
+            } else if(type.toLowerCase() == "bar" || type.toLowerCase() == "bars") {
 
                 type = "bar";
 
@@ -375,8 +375,6 @@ router.post('/GetLeastBusyPlaceTown', function(req, res) {
                     
                     //res.status(200).send();
 
-                }
-            });
             
             console.log(Location + " " + type);
             
@@ -495,6 +493,10 @@ router.post('/GetLeastBusyPlaceTown', function(req, res) {
                         }
                         
                     });
+                    
+                }
+                
+            });
                     
                 }
                 
